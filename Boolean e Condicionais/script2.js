@@ -1,8 +1,8 @@
 // Verifique se a sua idade é maior do que a de algum parente
 // Dependendo do resultado coloque no console 'É maior', 'É igual' ou 'É menor'
 
-const minhaidade = prompt("Qual é a sua idade.")
-const idadeparente = prompt("Qual é a idade do parente escolhido.")
+const minhaidade = parseInt(prompt("Qual é a sua idade."))
+const idadeparente = parseInt(prompt("Qual é a idade do parente escolhido."))
 
 switch(true) {
     case minhaidade > idadeparente:
@@ -11,7 +11,7 @@ switch(true) {
     case minhaidade < idadeparente:
         console.log("Você é mais novo!")
         break;
-    case minhaidade = idadeparente:
+    case minhaidade === idadeparente:
         console.log("Vocês tem a mesma idade!")
         break;
     default:

@@ -20,8 +20,7 @@ console.log(isTruthy("Leonardo"))
 // lembrando: perímetro é a soma dos quatro lados do quadrado
 
 function perimetro(tamanho){
-    var totalperimetro = tamanho * 2
-    return `Seu quadrado tem ${totalperimetro}m2`
+    return `Seu quadrado tem ${tamanho * 4}m2` 
 }
 
 console.log(perimetro(2))
@@ -30,8 +29,7 @@ console.log(perimetro(2))
 // ela deve possuir os parâmetros: nome e sobrenome]
 
 function nomecompleto(nome,sobrenome){
-    var completname = nome + " " + sobrenome
-    return `Seu nome é ${completname}`
+    return `Seu nome é ${nome} ${sobrenome}`
 }
 
 console.log(nomecompleto("leonardo","lobas"))
@@ -46,7 +44,7 @@ else {
     return "Este numero é impar"
 }
 }
-console.log(par(4))
+console.log(par(4)) 
 
 // Crie uma função que retorne o tipo de
 // dado do argumento passado nela (typeof)
@@ -66,12 +64,11 @@ function nome_completo() {
 addEventListener("scroll",nome_completo);
 
 // Corrija o erro abaixo
-function precisoVisitar(paisesVisitados) {
     var totalPaises = 193;
+function precisoVisitar(paisesVisitados) {
     return `Ainda faltam ${totalPaises - paisesVisitados} países para visitar`;
   }
   function jaVisitei(paisesVisitados) {
-    var totalPaises = 193;
     return `Já visitei ${paisesVisitados} do total de ${totalPaises} países`;
   }
   precisoVisitar(20);

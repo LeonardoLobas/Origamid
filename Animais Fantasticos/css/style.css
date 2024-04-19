@@ -16,6 +16,8 @@ body {
     background: #fff8e0;
     color: #222;
     -webkit-font-smoothing: antialiased;
+}
+main{
     display: grid;
     grid-template-columns: 1fr 120px minmax(300px, 800px) 1fr;
 }
@@ -45,7 +47,6 @@ body {
     font-size: large;
     letter-spacing: .1em;
 }
-
 
 .grid-section {
     grid-column: 2/4;
@@ -186,7 +187,7 @@ body {
 }
 
 @media (max-width: 700px) {
-    body{
+    main{
         grid-template-columns: 1fr;
     }
     .menu, .grid-section, .copy {

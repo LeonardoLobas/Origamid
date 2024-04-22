@@ -5,10 +5,13 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Animais Fantásticos</title>
-    <link rel="stylesheet" href="/Animais Fantasticos/css/style.min.css"
+    <link rel="stylesheet" href="/Animais Fantasticos/css/style.css"
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Spectral+SC:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,200;1,300;1,400;1,500;1,600;1,700;1,800&display=swap" rel="stylesheet">
+    <script>
+        document.documentElement.className += ' js'
+    </script>
 </head>
 
 <body> 
@@ -25,7 +28,7 @@
     </header>
     <section class="grid-section animais" id="animais">
         <h1 class="titulo">Animais Fantasticos</h1>
-        <ul class="animais-lista">
+        <ul class="animais-lista js-tabmenu">
             <li>
                 <img src="/Animais Fantasticos/img/imagem1.jpg" alt="Raposa">
             </li>    
@@ -45,7 +48,7 @@
                 <img src="/Animais Fantasticos/img/imagem6.jpg" alt="Leão">
             </li>
         </ul>
-        <div class="animais-descricao" aria-labelledby="label-descrições">
+        <div class="animais-descricao js-tabcontent" aria-labelledby="label-descrições">
             <section aria-labelledby="label-raposa">
                 <h2>Raposa</h2>
                 <p>As raposas são animais mamíferos e onívoros pertencentes à família Canidae. São vulpídeos de porte
@@ -80,9 +83,9 @@
                     </section>
                 </div>
             </section>
-            <section class="grid-section faq" id="faq">
+            <section class="grid-section faq js-faq" id="faq">
                 <h1 class="titulo">FAQ</h1>
-                <dl class="faq-lista">
+                <dl class="faq-lista js-accordion">
                     <dt>Qual a idade dos animais ?</dt>
                     <dd>Também apresentam como particularidade suas pupilas ovais, semelhantes às pupilas verticais dos
                         felídeos.</dd>

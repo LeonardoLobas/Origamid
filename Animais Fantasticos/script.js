@@ -1,46 +1,23 @@
-// Quando o usuário clicar nos links internos do site,
-// adicione a classe ativo ao item clicado e remova dos
-// demais itens caso eles possuam a mesma. Previna
-// o comportamento padrão desses links
+// // Duplique o menu e adicione ele em copy
 
-// const linksInternos = document.querySelectorAll('main a[href^="#"]');
+// const menu = document.querySelector('.menu');
+// const copy = document.querySelector('.copy');
+// const menucopia = menu.cloneNode(true);
+// copy.appendChild(menucopia);
 
-// function clicou(event) {
-//   event.preventDefault();
-//   linksInternos.forEach((link) =>{
-//     link.classList.remove('ativo')
-//   })
-//   event.target.classList.add('ativo');
-// }
+// // Selecione o primeiro DT da dl de Faq
 
-// linksInternos.forEach((link) => {
-//   link.addEventListener('click', clicou);
-// })
+// const faq = document.querySelector('.faq')
+// const primeiroDt = faq.querySelector('dt')
+
+// // Selecione o DD referente ao primeiro DT
+
+// const proximoDD = primeiroDt.nextElementSibling;
 
 
 
-// Selecione todos os elementos do site começando a partir do body,
-// ao clique mostre exatamente quais elementos estão sendo clicados
+// // Substitua o conteúdo html de .faq pelo de .animais
 
-const selecionar = document.querySelectorAll('body *')
+// const animais = document.querySelector('.animais');
 
-function mostrarelements(monstrar)  {
-  const elementos = monstrar.currentTarget 
-  console.log(elementos)
-}
- 
-
-selecionar.forEach((evento) =>{
-  evento.addEventListener('click',mostrarelements)
-})
-
-
-
-
-// Utilizando o código anterior, ao invés de mostrar no console,
-// remova o elemento que está sendo clicado, o método remove() remove um elemento
-
- 
-
-
-// Se o usuário clicar na tecla (t), aumente todo o texto do site. 
+// faq.innerHTML = animais.innerHTML

@@ -67,6 +67,7 @@ initAnimacaoScroll()
 // ----------------------------- LISTA ANIMAIS ('SCROLL')--------------------------------
 const animaisLista = document.querySelector('.animais-lista')
 const tabcontent = document.querySelectorAll('.js-tabcontent section')
+console.log(tabcontent)
 function scrollLista() {
     const scrollTop = animaisLista.scrollTop
     console.log(scrollTop)

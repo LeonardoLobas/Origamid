@@ -1,31 +1,32 @@
-// Crie uma array com os anos que o Brasil ganhou a copa
-// 1959, 1962, 1970, 1994, 2002
-
-var copa = [1959,1962,1970,1994,2002]
-
-// Interaja com a array utilizando um loop, para mostrar
-// no console a seguinte mensagem, `O brasil ganhou a copa de ${ano}`
-
-copa.forEach(function(){
-    console.log(`O Brasil ganhou a copa de ${copa}`)
-})
+const comidas = ['Pizza', 'Frango', 'Carne', 'Macarrão'];
+// Remova o primeiro valor de comidas e coloque em uma variável
+// Remova o último valor de comidas e coloque em uma variável
+// Adicione 'Arroz' ao final da array
+// Adicione 'Peixe' e 'Batata' ao início da array
+comidas.pop()
+comidas.shift()
+comidas.push('Arroz')
+comidas.unshift('Peixe','Batata')
 
 
-
-// Interaja com um loop nas frutas abaixo e pare ao chegar em Pera
-var frutas = ['Banana', 'Maçã', 'Pera', 'Uva', 'Melância']
- 
-for (var fruta = 0; fruta < frutas.length; fruta++){
-    console.log(frutas[fruta]);
-    if(frutas[fruta] === "Pera"){
-        break;
-    }
-}
+const estudantes = ['Marcio', 'Brenda', 'Joana', 'Kleber', 'Julia'];
+// Arrume os estudantes em ordem alfabética
+// Inverta a ordem dos estudantes
+// Verifique se Joana faz parte dos estudantes
+// Verifique se Juliana faz parte dos estudantes
 
 
 
-// Coloque a última fruta da array acima em uma variável,
-// sem remover a mesma da array.
+let html = `<section>
+              <div>Sobre</div>
+              <div>Produtos</div>
+              <div>Contato</div>
+            </section>`
+// Substitua section por ul e div com li,
+// utilizando split e join
 
-var ultimaFruta = frutas[frutas.length - 1]
-console.log(ultimaFruta)
+
+
+const carros = ['Ford', 'Fiat', 'VW', 'Honda'];
+// Remova o último carro, mas antes de remover
+// salve a array original em outra variável

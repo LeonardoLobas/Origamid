@@ -15,16 +15,14 @@ const estudantes = ['Marcio', 'Brenda', 'Joana', 'Kleber', 'Julia'];
 // Verifique se Joana faz parte dos estudantes
 // Verifique se Juliana faz parte dos estudantes
 
+estudantes.sort()
+estudantes.reverse()
 
-
-let html = `<section>
-              <div>Sobre</div>
-              <div>Produtos</div>
-              <div>Contato</div>
-            </section>`
+let htmlFrase = '<section><div>Sobre</div><div>Produtos</div><div>Contato</div></section>'
 // Substitua section por ul e div com li,
 // utilizando split e join
 
+htmlFrase = htmlFrase.split('section').join('ul').split('div').join('li'); 
 
 
 const carros = ['Ford', 'Fiat', 'VW', 'Honda'];

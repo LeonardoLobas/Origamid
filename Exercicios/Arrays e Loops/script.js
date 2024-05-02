@@ -1,30 +1,57 @@
-const comidas = ['Pizza', 'Frango', 'Carne', 'Macarrão'];
-// Remova o primeiro valor de comidas e coloque em uma variável
-// Remova o último valor de comidas e coloque em uma variável
-// Adicione 'Arroz' ao final da array
-// Adicione 'Peixe' e 'Batata' ao início da array
-comidas.pop()
-comidas.shift()
-comidas.push('Arroz')
-comidas.unshift('Peixe','Batata')
+// Selecione cada curso e retorne uma array
+// com objetos contendo o título, descricao,
+// aulas e horas de cada curso
+
+const cursos = document.querySelectorAll('.curso');
+const arrayCurso = Array.from(cursos);
+
+// Retorne uma lista com os
+// números maiores que 100
+const numeros = [3, 44, 333, 23, 122, 322, 33];
+const lista = numeros.filter((n) => {
+    return n > 100
+})
+
+console.log(lista)
 
 
-const estudantes = ['Marcio', 'Brenda', 'Joana', 'Kleber', 'Julia'];
-// Arrume os estudantes em ordem alfabética
-// Inverta a ordem dos estudantes
-// Verifique se Joana faz parte dos estudantes
-// Verifique se Juliana faz parte dos estudantes
+// Verifique se Baixo faz parte
+// da lista de instrumentos e retorne true
+const instrumentos = ['Guitarra', 'Baixo', 'Bateria', 'Teclado']
 
-estudantes.sort()
-estudantes.reverse()
+const verifica = instrumentos.includes('Baixo') 
 
-let htmlFrase = '<section><div>Sobre</div><div>Produtos</div><div>Contato</div></section>'
-// Substitua section por ul e div com li,
-// utilizando split e join
-
-htmlFrase = htmlFrase.split('section').join('ul').split('div').join('li'); 
+console.log(verifica)
 
 
-const carros = ['Ford', 'Fiat', 'VW', 'Honda'];
-// Remova o último carro, mas antes de remover
-// salve a array original em outra variável
+// Retorne o valor total das compras
+const compras = [
+  {
+    item: 'Banana',
+    preco: 'R$ 4,99'
+  },
+  {
+    item: 'Ovo',
+    preco: 'R$ 2,99'
+  },
+  {
+    item: 'Carne',
+    preco: 'R$ 25,49'
+  },
+  {
+    item: 'Refrigerante',
+    preco: 'R$ 5,35'
+  },
+  {
+    item: 'Quejo',
+    preco: 'R$ 10,60'
+  }
+]
+
+console.log(compras)
+const soma = compras.reduce((acumulator,item) =>{
+    const preco = +item.preco.replace('R$',' ').replace(',','.')
+    return acumulator + preco
+},0)
+
+console.log(soma)

@@ -48,10 +48,9 @@ const compras = [
   }
 ]
 
-console.log(compras)
-const soma = compras.reduce((acumulator,item) =>{
-    const preco = +item.preco.replace('R$',' ').replace(',','.')
-    return acumulator + preco
+const soma = compras.reduce((acumulator,item) => {
+  const precoLimpo = +item.preco.replace('R$',' ').replace(',','.')
+  console.log(precoLimpo)
+  return acumulator + precoLimpo
 },0)
-
 console.log(soma)

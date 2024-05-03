@@ -1,76 +1,31 @@
-// Times que eu ja joguei e quantos faltam no brasil !
-
-// var quantidade = parseInt(prompt("Em quais times você já jogou?"))
-// function times(jajoguei){
-//     var total = 20 
-//     return console.log(`Faltam ${total - quantidade} a jogar`)
-// }
-
-// times()
-
-// Crie uma função para verificar se um valor é Truthy
+// Retorne a soma total de caracteres dos
+// parágrafos acima utilizando reduce
 
 
-function isTruthy(valor) {
-    return !!valor;
-}
-console.log(isTruthy("Leonardo"))
+const paragrafos = document.querySelectorAll('p');
 
-// Crie uma função matemática que retorne o perímetro de um quadrado
-// lembrando: perímetro é a soma dos quatro lados do quadrado
 
-function perimetro(tamanho){
-    return `Seu quadrado tem ${tamanho * 4}m2` 
-}
+const totalCaracteres = Array.prototype.reduce.call(paragrafos, (acumulador,item) =>{
+    return acumulador + +item.innerText.length;
+},0)
 
-console.log(perimetro(2))
+console.log(totalCaracteres)
 
-// Crie uma função que retorne o seu nome completo
-// ela deve possuir os parâmetros: nome e sobrenome]
 
-function nomecompleto(nome,sobrenome){
-    return `Seu nome é ${nome} ${sobrenome}`
+// Crie uma função que retorne novos elementos
+// html, com os seguintes parâmetros
+// tag, classe e conteudo.
+
+function criarElemento(tag, classe, conteudo) {
+    const elemento = document.createElement(tag);
+    classe ? elemento.classList.add(classe) : null;
+    conteudo ? elemento.classList.add(classe) : null;
+    classe ? elemento.innerHTML = conteudo : null
+    return elemento
 }
 
-console.log(nomecompleto("leonardo","lobas"))
+// Crie uma nova função utilizando a anterior como base
+// essa nova função deverá sempre criar h1 com a
+// classe titulo. Porém o parâmetro conteudo continuará dinâmico
 
-
-// Crie uma função que verifica se um número é par
-
-function par(numero){
-    if ((numero % 2) === 0) 
-    return `Este numero é par`
-else {
-    return "Este numero é impar"
-}
-}
-console.log(par(4)) 
-
-// Crie uma função que retorne o tipo de
-// dado do argumento passado nela (typeof)
-
-function tipodedado(dado){
-    return typeof dado;
-}
-console.log(tipodedado(42))
-// addEventListener é uma função nativa do JavaScript
-// o primeiro parâmetro é o evento que ocorre e o segundo o Callback
-// utilize essa função para mostrar no console o seu nome completo
-// quando o evento 'scroll' ocorrer.
-
-function nome_completo() {
-     console.log("Leonardo Lobas");
-}
-addEventListener("scroll",nome_completo);
-
-// Corrija o erro abaixo
-    var totalPaises = 193;
-function precisoVisitar(paisesVisitados) {
-    return `Ainda faltam ${totalPaises - paisesVisitados} países para visitar`;
-  }
-  function jaVisitei(paisesVisitados) {
-    return `Já visitei ${paisesVisitados} do total de ${totalPaises} países`;
-  }
-  precisoVisitar(20);
-  jaVisitei(20);
-  
+const h1Titulo = criarElemento.bind(null, 'h1', 'titulo')

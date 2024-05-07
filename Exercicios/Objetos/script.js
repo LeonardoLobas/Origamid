@@ -1,43 +1,38 @@
-// Crie um objeto com os seus dados pessoais
-// Deve possui pelo menos duas propriedades nome e sobrenome
-
-var dados = {
-    nome: "Leonardo",
-    sobrenome: "Lobas",
-    idade: 21,
-    altura: 1.78,
+// Crie uma função que verifique
+// corretamente o tipo de dado
+function verificarDado(dado){
+  return Object.prototype.toString.call(dado);
 }
 
-// Crie um método no objeto anterior, que mostre o seu nome completo
-dados.nomecompleto = function (){
-    return `${this.nome} ${this.sobrenome}`
-}
+console.log(verificarDado('String'))
 
+// Crie um objeto quadrado com
+// a propriedade lados e torne
+// ela imutável
 
-
-
-
-// Modifique o valor da propriedade preco para 3000
-var carro = {
-    preco: 1000,
-    portas: 4,
-    marca: 'Audi',
+const quadrado = {};
+Object.defineProperties(quadrado, {
+  lados: {
+    value: 4,
+    enumerable:true,
   }
+})
 
-  carro.preco = 3000
-  
-  // Crie um objeto de um cachorro que represente um labrador,
-  // preto com 10 anos, que late ao ver um homem
+// Previna qualquer mudança
+// no objeto abaixo
 
-  var cachorro = {
-    raca: "labrador",
-    cor: "preto",
-    idade: 10,
-    latir(pessoa) {
-        if(pessoa === "homem")
-        return "latir";
-     else {
-        return "nada";
-     }
-  }
+
+const configuracao = {
+  width: 800,
+  height: 600,
+  background: '#333'
 }
+
+Object.freeze(configuracao)
+
+
+// Liste o nome de todas
+// as propriedades do
+// protótipo de String e Array
+console.log(Object.getOwnPropertyNames(String.prototype))
+console.log(Object.getOwnPropertyNames(Array.prototype))

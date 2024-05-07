@@ -3,7 +3,7 @@
 // ---------------FAQ--------------------------------------------------
 
 function initAccordion(){
-    const accordionList = document.querySelectorAll('.js-accordion dt');
+    const accordionList = document.querySelectorAll('[data-anima="accordion"] dt');
     const activeClass = 'ativo';
     if (accordionList.length) {
         accordionList[0].classList.add(activeClass)
@@ -24,7 +24,7 @@ initAccordion();
 
 //---------------------------LINKS INTERNOS SCROLL--------------------------------
 function initScrollSuave() {
-    const linksInternos = document.querySelectorAll('.js-menu a[href^="#"')
+    const linksInternos = document.querySelectorAll('[data-menu="suave"] a[href^="#"')
     function scrollToSection(event) {
         event.preventDefault();
         const href = event.currentTarget.getAttribute('href');
@@ -45,7 +45,7 @@ initScrollSuave();
 
 // ----------------------------ANIMAÇÃO AO SCROLL-------------------
 function initAnimacaoScroll(){
-    const sections = document.querySelectorAll('.js-scroll')
+    const sections = document.querySelectorAll('[data-anime="scroll"]')
     if (sections.length) {
         function animaScroll() {
             sections.forEach((section) => {
@@ -66,42 +66,40 @@ initAnimacaoScroll()
 
 // ----------------------------- LISTA ANIMAIS ('SCROLL')--------------------------------
 const animaisLista = document.querySelector('.animais-lista')
-const tabcontent = document.querySelectorAll('.js-tabcontent section')
-console.log(tabcontent)
+const tabcontent = document.querySelectorAll('[data-tab="content"] section')
 function scrollLista() {
-    const scrollTop = animaisLista.scrollTop
-    console.log(scrollTop)
+    const scrollTop = animaisLista.scrollTop;
     if (scrollTop > 0 && scrollTop < 300) {
-        tabcontent[0].classList.add('ativo')
-        tabcontent[1].classList.remove('ativo')
+        tabcontent[0].classList.add('ativo' ,'show-right')
+        tabcontent[1].classList.remove('ativo', 'show-right')
     } 
     else if (scrollTop > 300 && scrollTop < 600) {
-        tabcontent[0].classList.remove('ativo')
-        tabcontent[1].classList.add('ativo')
-        tabcontent[2].classList.remove('ativo')
+        tabcontent[0].classList.remove('ativo', 'show-right')
+        tabcontent[1].classList.add('ativo', 'show-right')
+        tabcontent[2].classList.remove('ativo', 'show-right')
         
     }
     else if (scrollTop > 600 && scrollTop < 900) {
-        tabcontent[1].classList.remove('ativo')
-        tabcontent[2].classList.add('ativo')
-        tabcontent[3].classList.remove('ativo')
+        tabcontent[1].classList.remove('ativo', 'show-right')
+        tabcontent[2].classList.add('ativo', 'show-right')
+        tabcontent[3].classList.remove('ativo', 'show-right')
         
     }
     else if (scrollTop > 900 && scrollTop < 1200) {
-        tabcontent[2].classList.remove('ativo')
-        tabcontent[3].classList.add('ativo')
-        tabcontent[4].classList.remove('ativo')
+        tabcontent[2].classList.remove('ativo', 'show-right')
+        tabcontent[3].classList.add('ativo', 'show-right')
+        tabcontent[4].classList.remove('ativo', 'show-right')
     
     }
     else if (scrollTop > 1200 && scrollTop < 1500) {
-        tabcontent[3].classList.remove('ativo')
-        tabcontent[4].classList.add('ativo')
-        tabcontent[5].classList.remove('ativo')
+        tabcontent[3].classList.remove('ativo', 'show-right')
+        tabcontent[4].classList.add('ativo', 'show-right')
+        tabcontent[5].classList.remove('ativo', 'show-right')
 
     } 
     else if (scrollTop > 1500 ){
-        tabcontent[5].classList.add('ativo')
-        tabcontent[4].classList.remove('ativo')
+        tabcontent[5].classList.add('ativo', 'show-right')
+        tabcontent[4].classList.remove('ativo', 'show-right')
     }
 }
 animaisLista.addEventListener('scroll', scrollLista)
@@ -111,8 +109,8 @@ animaisLista.addEventListener('scroll', scrollLista)
 //-----------------------LISTA ANIMAIS ('CLICK')---------------------------------------
 
 function initTabNav(){
-    const tabmenu = document.querySelectorAll('.js-tabmenu li');
-    const tabcontent = document.querySelectorAll('.js-tabcontent section');
+    const tabmenu = document.querySelectorAll('[data-tab="menu"] li');
+    const tabcontent = document.querySelectorAll('[data-tab="content"] section');
     tabcontent[0].classList.add('ativo')
 
 
@@ -121,7 +119,8 @@ function initTabNav(){
             tabcontent.forEach((section) => {
                 section.classList.remove('ativo');
             })
-            tabcontent[index].classList.add('ativo');
+            const direcao = tabcontent[index].dataset.anime;
+            tabcontent[index].classList.add('ativo', direcao);
 
         }
 

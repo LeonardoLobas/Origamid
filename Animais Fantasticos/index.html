@@ -18,7 +18,7 @@
 
 <body>
     <main>
-        <header class="menu js-menu">
+        <header class="menu" data-menu="suave">
             <nav>
                 <ul>
                     <Li><a href="#animais">Animais</a></Li>
@@ -30,7 +30,7 @@
         </header>
         <section class="grid-section animais" id="animais">
             <h1 class="titulo">Animais Fantasticos</h1>
-            <ul class="animais-lista js-tabmenu">
+            <ul class="animais-lista" data-tab="menu">
                 <li>
                     <img src="/Animais Fantasticos/img/imagem1.jpg" alt="Raposa">
                 </li>
@@ -50,8 +50,8 @@
                     <img src="/Animais Fantasticos/img/imagem6.jpg" alt="Leão">
                 </li>
             </ul>
-            <div class="animais-descricao js-tabcontent " aria-labelledby="label-descrições">
-                <section aria-labelledby="label-raposa">
+            <div class="animais-descricao"  aria-labelledby="label-descrições" data-tab="content">
+                <section data-anime="show-right" aria-labelledby="label-raposa">
                     <h2>Raposa</h2>
                     <p>As raposas são animais mamíferos e onívoros pertencentes à família Canidae. São vulpídeos de
                         porte
@@ -59,7 +59,7 @@
                     <p>Também apresentam como particularidade suas pupilas ovais, semelhantes às pupilas verticais dos
                         felídeos.</p>
                 </section>
-                <section aria-labelledby="label-esquilo">
+                <section data-anime="show-right" aria-labelledby="label-esquilo">
                     <h2>Esquilo</h2>
                     <p>Os esquilos pertencem a uma grande família de mamíferos roedores, de pequeno e médio porte,
                         conhecida como Sciuridae. No Brasil, são também conhecidos como serelepe, caxinguelê, caxinxe,
@@ -68,26 +68,26 @@
                     <p>Trata-se de um animal de hábitos diurnos e se desloca com incrível agilidade pela copas das
                         árvores, bem coma para subir ou descer pelos troncos.</p>
                 </section>
-                <section aria-labelledby="label-urso">
+                <section data-anime="show-right" aria-labelledby="label-urso">
                     <h2>Urso</h2>
                     <p>Os Ursos constituem uma família de mamíferos carnívoros de grande porte, contendo os ursos e os
                         pandas. Eles são classificados como caníformes ou carnivoros caninos.</p>
                     <p>É uma família que vive nos mais diversos habitats terrestres.</p>
                 </section>
-                <section aria-labelledby="label-lobo">
+                <section data-anime="show-right" aria-labelledby="label-lobo">
                     <h2>Lobo</h2>
                     <p>Em geral, os lobos são inteligentes, velozes e estrategistas no momento da caça, sendo
                         reconhecidos como excelentes predadores. Eles também são animais territorialistas e disputam o
                         poder do espaço com grupos rivais.</p>
                     <p>É comum a delimitação das fronteiras entre os grupos com fezes e urina.</p>
                 </section>
-                <section aria-labelledby="label-macaco">
+                <section data-anime="show-right" aria-labelledby="label-macaco">
                     <h2>Macaco</h2>
                     <p>Macaco é um termo de origem africana utilizado como designação comum a todas as espécies de
                         símios ou primatas antropoides.</p>
                     <p>É aplicada restritivamente no Brasil aos cebídeos em geral.</p>
                 </section>
-                <section aria-labelledby="label-leão">
+                <section data-anime="show-right" aria-labelledby="label-leão">
                     <h2>Leão</h2>
                     <p>O leão [feminino: leoa] é uma espécie de mamífero carnívoro do gênero Panthera e da família
                         Felidae.</p>
@@ -96,9 +96,9 @@
                 </section>
             </div>
         </section>
-        <section class="grid-section faq js-faq js-scroll" id="faq">
+        <section class="grid-section faq js-faq" data-anime="scroll" id="faq">
             <h1 class="titulo">FAQ</h1>
-            <dl class="faq-lista js-accordion">
+            <dl class="faq-lista" data-anima="accordion">
                 <dt>Qual a idade dos animais ?</dt>
                 <dd>Também apresentam como particularidade suas pupilas ovais, semelhantes às pupilas verticais dos
                     felídeos.</dd>
@@ -113,7 +113,7 @@
                     felídeos.</dd>
             </dl>
         </section>
-        <section class="grid-section contato js-scroll" id="contato">
+        <section class="grid-section contato" data-anime="scroll" id="contato">
             <h1 class="titulo">Contato</h1>
             <div class="mapa">
                 <img src="/Animais Fantasticos/img/mapa.png" alt="Mapa">
@@ -131,7 +131,6 @@
 
         </footer>
     </main>
-    <script src="/Animais Fantasticos/ExerciciosAnimaisfantasticos.js"></script>
     <script src="/Animais Fantasticos/script.js"></script>
 </body>
 

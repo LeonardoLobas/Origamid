@@ -4,8 +4,10 @@ import initAccordion from './modules/accordion.js';
 import initTabNav from './modules/tabnav.js';
 import scrollLista from './modules/scroll-lista.js';
 import clickModal from './modules/modal.js';
+import initTooltip from './modules/tooltip.js';
 
 
+initTooltip();
 clickModal();
 scrollLista();
 initTabNav();

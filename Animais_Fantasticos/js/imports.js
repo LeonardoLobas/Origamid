@@ -6,7 +6,9 @@ import scrollLista from './modules/scroll-lista.js';
 import clickModal from './modules/modal.js';
 import initTooltip from './modules/tooltip.js';
 import initDropDown from './modules/dropdown-menu.js';
+import initMenuMobile from './modules/menu-mobile.js';
 
+initMenuMobile();
 initDropDown();
 initTooltip();
 clickModal();

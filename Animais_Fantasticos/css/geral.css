@@ -215,6 +215,9 @@ body {
     .copy {
         margin-bottom: 0px;
     }
+    .numeros-grid {
+        grid-column: 1;
+    }
 }
 
 

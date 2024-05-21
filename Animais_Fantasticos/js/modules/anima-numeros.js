@@ -10,7 +10,6 @@ export default function initAnimaNumeros() {
             numero.innerText = start;
             if(start > total) {
                 numero.innerText = total;
-                console.log(numero)
                 clearInterval(timer)
             }
         }, 60 * Math.random());

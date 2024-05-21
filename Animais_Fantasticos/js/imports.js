@@ -8,7 +8,9 @@ import initTooltip from './modules/tooltip.js';
 import initDropDown from './modules/dropdown-menu.js';
 import initMenuMobile from './modules/menu-mobile.js';
 import initAnimaNumeros from './modules/anima-numeros.js';
+import initHorario from './modules/horario.js';
 
+initHorario();
 initAnimaNumeros();
 initMenuMobile();
 initDropDown();

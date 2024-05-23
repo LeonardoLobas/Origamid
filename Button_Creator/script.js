@@ -23,7 +23,7 @@ const handleStyle = {
         this.Element.style.color = value
     },
     border(value) {
-        this.Element.style.border = value + 'px solid black'
+        this.Element.style.border = value 
     },
     borderRadius(value) {
         this.Element.style.borderRadius = value + 'px'  
@@ -39,8 +39,22 @@ const handleStyle = {
 
 function handleChange(event) {
     const name = event.target.name;
-    const value = event.target.value;
+    const value = event.target.value; 
     handleStyle[name](value);
+    showCss();
+    saveValues(name,value);
+}
+
+function saveValues(name,value) {
+    localStorage[name] = value
+}
+
+function setValues() {
+    const properties = Object.keys(localStorage);
+    properties.forEach(propertie => {
+        handleStyle[propertie](localStorage[propertie]);
+        controles.elemests[propertie].value = localStorage[propertie]
+    });
     showCss();
 }
 

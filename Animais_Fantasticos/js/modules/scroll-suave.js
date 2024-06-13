@@ -26,4 +26,4 @@ export default class ScrollSuave {
         }
         return this;
     }
-}
+}    

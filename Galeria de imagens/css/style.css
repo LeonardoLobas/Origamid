@@ -15,6 +15,10 @@ img {
     overflow: hidden;
 }
 
+.slide:hover {
+    will-change: transform;
+}
+
 .slide {
     display: flex;
 }
@@ -24,4 +28,14 @@ img {
     flex-shrink: 0;
     max-width: 800px;
     margin: 0px 20px;
+    opacity: .8 ;
+    transform: scale(.8);
+    transition: .5s;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.slide li.active {
+    opacity: 1;
+    transform: scale(1);
 }

@@ -10,14 +10,15 @@ import initMenuMobile from './modules/menu-mobile.js';
 import initAnimaNumeros from './modules/anima-numeros.js';
 import initHorario from './modules/horario.js';
 import initfetchBitCoin from './modules/bitcoin.js';
+import SlideNav, { SlideNav1 } from './modules/slide.js';
 
 const scrollSuave = new ScrollSuave('[data-menu="suave"] a[href^="#"]');
 scrollSuave.init();
 const accordion = new Accordion('[data-anima="accordion"] dt');
 accordion.init();
-const tabnav = new TabNav('[data-tab="menu"] li','[data-tab="content"] section');
+const tabnav = new TabNav('[data-tab="menu"] li', '[data-tab="content"] section');
 tabnav.init();
-const modal = new Modal('[data-modal="abrir"]','[data-modal="fechar"]','[data-modal="container"]');
+const modal = new Modal('[data-modal="abrir"]', '[data-modal="fechar"]', '[data-modal="container"]');
 modal.init();
 const tooltip = new Tooltip('[data-tooltip]');
 tooltip.init()
@@ -28,3 +29,8 @@ initMenuMobile();
 initDropDown();
 scrollLista();
 initAnimacaoScroll();
+
+const slide = new SlideNav1('.slide', '.wrapper');
+console.log(slide)
+slide.init();
+slide.addControl('.custom-controls')

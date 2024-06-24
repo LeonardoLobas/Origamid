@@ -12,24 +12,24 @@
 <body>
     <div id="root"></div>
 
-    <script type="text/babel">
-        const Button = () => {
-            const [total,setTotal] = React.useState(0)
-            return <button onClick = {() => setTotal(total + 1)}>Adicionar {total}</button>;
-        }
+<!-- React -->
+<div id="app-react"></div>
 
-        const App = () => {
-            return (
-                <div>
-                    <h1>App React</h1>
-                    <Button />
-                </div>
-            );
-        }
+<script type="text/babel">
+  const Comprar = () => {
+    const [contador, setContador] = React.useState(1);
 
-        const container = document.getElementById('root');
-        const root = ReactDOM.createRoot(container);
-        root.render(<App />);
-    </script>
+    return (
+      <div>
+        <p>Total: {contador}</p>
+        <p>Preço: R$ {contador * 250}</p>
+        <button onClick={() => setContador(contador + 1)}>Comprar</button>
+      </div>
+    );
+  };
+
+  ReactDOM.createRoot(document.getElementById('app-react')).render(<Comprar />);
+</script>
+
 </body>
 </html>
